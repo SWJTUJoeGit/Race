@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p  #{title} nodejs服务api接口说明
+  <li><a href="GuideIconDel?id=559")>删除交通标识</a></li>
+
+  <li><a href="GuideIconAdd?id=12&name=限速30&datetime=2019-12-01&Location=南区体育馆&Cordinate_x=104&cordinate_y=31")>添加交通标识</a></li>
+
+  <li><a href="GuideIconUpdate?name='限速30'&datetime=2019-12-01&Location='南区体育馆'&Cordinate_x=104&cordinate_y=31&id=559")>通过id修改交通标识</a></li>
+
+  <li><a href="GuideIconAll")>查询所有交通标识</a></li>
+
+  <li><a href="GuideIconById?id=563")>查询单个交通标识</a></li>
+
+  //show image
+  //<img src="418.jpg"/>

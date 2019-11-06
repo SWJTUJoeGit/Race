@@ -1,0 +1,45 @@
+
+
+.title {
+	color: white;
+	margin: 0px;
+}
+
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.logo {
+	width: 60px;
+	height: 60px;
+}
+
+.north-arrow {
+	position: fixed;
+	z-index: 3;
+	top: 100px;
+	right: 20px;
+	width: 80px
+}
+
+.map {
+	display: flex;
+}
+
+.ant-layout-header {
+	display: flex; 
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+}
+
+
+.leaflet-container {
+	flex: 1 1 100%;
+	z-index: 1;
+}
+
+

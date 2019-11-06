@@ -1,0 +1,423 @@
+[{
+        "model": "patient",
+        "data": {
+            "first_name": "Bob",
+            "last_name": "Smith",
+            "gender": "M",
+            "dob": "1967-01-12",
+            "street_address": "20 Maple Avenue",
+            "city": "San Pedro",
+            "state": "CA",
+            "zip": 90731,
+            "telephone": "4242971335",
+            "height": "6'1",
+            "weight": "185lbs",
+            "allergies": "Peanuts",
+            "procedures": "Knee Surgery",
+            "type": "Patient",
+            "emergency_contact_name": "Marth Smith",
+            "emergency_contact_number": "3236574827",
+            "provider_name": "Kaiser Permanente",
+            "policy_number": "Z903452",
+            "appointments": "",
+            "image": "http://interactive.wxxi.org/sites/default/files/images/highlights/smithr_105.jpg",
+            "visits_patient_id": ""
+        }
+    },
+    {
+        "model": "patient",
+        "data": {
+            "first_name": "Eugene",
+            "last_name": "Richards",
+            "gender": "M",
+            "dob": "1987-10-11",
+            "street_address": "601 Sherwood Ave. ",
+            "city": "San Bernardino",
+            "state": "CA",
+            "zip": 92404,
+            "telephone": "3239542037",
+            "height": "5'5",
+            "weight": "190lbs",
+            "allergies": "Cashews",
+            "procedures": "Kidney Transplant",
+            "type": "Patient",
+            "emergency_contact_name": "Barbara Richards",
+            "emergency_contact_number": "3235126356",
+            "provider_name": "Cigna",
+            "policy_number": "B40299485",
+            "appointments": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Eugene_richards_2010.jpg/220px-Eugene_richards_2010.jpg",
+            "visits_patient_id": ""
+        }
+    },
+    {
+        "model": "patient",
+        "data": {
+            "first_name": "Alberta",
+            "last_name": "Wise",
+            "gender": "F",
+            "dob": "1984-13-08",
+            "street_address": "3872 Rubaiyat Road",
+            "city": "Grand Rapids",
+            "state": "MI",
+            "zip": 49503,
+            "telephone": "2132926945",
+            "height": "5'10",
+            "weight": "165lbs",
+            "allergies": "Cats, Shrimp",
+            "procedures": "Removal of Wisdom Teeth",
+            "type": "Patient",
+            "emergency_contact_name": "Steven Wise",
+            "emergency_contact_number": "2132716073",
+            "provider_name": "Blue Shield",
+            "policy_number": "Z40090335",
+            "appointments": "",
+            "image": "https://d1t3gia0in9tdj.cloudfront.net/photo/tributes/t/8/r/207x207/134938/b0794dc3831c4ef7abb200de6cb42cb2.jpg",
+            "visits_patient_id": ""
+        }
+    },
+    {
+        "model": "patient",
+        "data": {
+            "first_name": "Raymond",
+            "last_name": "Madrigal",
+            "gender": "M",
+            "dob": "1974-14-01",
+            "street_address": "241 Indian Spring St.d",
+            "city": "Pittsburg",
+            "state": "CA",
+            "zip": 94565,
+            "telephone": "3234598219",
+            "height": "5'7",
+            "weight": "110lbs",
+            "allergies": "",
+            "procedures": "Removal of Wisdom Teeth",
+            "type": "Patient",
+            "emergency_contact_name": "Steven Wise",
+            "emergency_contact_number": "2132716073",
+            "provider_name": "Alta Med",
+            "policy_number": "Z40090335",
+            "appointments": "",
+            "image": "https://semantic-ui.com/images/avatar/large/jenny.jpg",
+            "visits_patient_id": ""
+        }
+    },
+    {
+        "model": "patient",
+        "data": {
+            "first_name": "Deborah",
+            "last_name": "Sanderson",
+            "gender": "F",
+            "dob": "1961-28-07",
+            "street_address": "369 Wentworth St.",
+            "city": "Pomona",
+            "state": "CA",
+            "zip": 91766,
+            "telephone": "3238428126",
+            "height": "5'5",
+            "weight": "98lbs",
+            "allergies": "Cats, Dairy",
+            "procedures": "Blood transfusion",
+            "type": "Patient",
+            "emergency_contact_name": "Tiffany Wise",
+            "emergency_contact_number": "2134982475",
+            "provider_name": "Blue Cross",
+            "policy_number": "X49883785",
+            "image": "https://semantic-ui.com/images/avatar/large/elliot.jpg",
+            "appointments": "",
+            "visits_patient_id": ""
+        }
+    },
+    {
+        "model": "User",
+        "data": {
+            "email": "bob@test.com",
+            "password": "abc123",
+            "patientId": "1",
+            "type": "patient"
+        }
+    },
+    {
+        "model": "User",
+        "data": {
+            "email": "eugene@test.com",
+            "password": "abc123",
+            "patientId": "2",
+            "type": "patient"
+        }
+    },
+    {
+        "model": "User",
+        "data": {
+            "email": "alberta@test.com",
+            "password": "abc123",
+            "patientId": "3",
+            "type": "patient"
+        }
+    },
+    {
+        "model": "User",
+        "data": {
+            "email": "raymond@test.com",
+            "password": "abc123",
+            "patientId": "4",
+            "type": "patient"
+        }
+    },
+    {
+        "model": "User",
+        "data": {
+            "email": "deborah@test.com",
+            "password": "abc123",
+            "patientId": "5",
+            "type": "patient"
+        }
+    },
+    {
+        "model": "Admin",
+        "data": {
+            "email": "admin@admin.com",
+            "password": "abc123",
+            "type": "admin"
+        }
+    },
+    {
+        "model": "doctors",
+        "data": {
+            "first_name": "Steve",
+            "last_name": "Peterson",
+            "telephone": "3103005890",
+            "image": "http://www.lungmds.com/images/team/james-a-dean-md.png"
+        }
+    },
+    {
+        "model": "doctors",
+        "data": {
+            "first_name": "Nancy",
+            "last_name": "Cunningham",
+            "telephone": "3103005890",
+            "image": "https://media.bizj.us/view/img/10569204/nancy-cunningham-6133599*166xx480-640-80-0.jpg"
+        }
+    },
+    {
+        "model": "prescriptions",
+        "data": {
+            "med_name": "Lipitor",
+            "patient_id": 1,
+            "dose": "10mg/day",
+            "amount": "30 pills",
+            "prescribed_date": "2016-05-05",
+            "renew_date": "2016-04-06"
+        }
+
+    },
+    {
+        "model": "prescriptions",
+        "data": {
+            "med_name": "Adderall",
+            "patient_id": 2,
+            "dose": "10mg/day",
+            "amount": "30 pills",
+            "prescribed_date": "2017-02-02",
+            "renew_date": "2017-01-03"
+        }
+    },
+    {
+        "model": "prescriptions",
+        "data": {
+            "med_name": "Xanax",
+            "patient_id": 3,
+            "dose": "5mg/day",
+            "amount": "30 pills",
+            "prescribed_date": "2017-20-04",
+            "renew_date": "2017-19-05"
+        }
+    },
+    {
+        "model": "prescriptions",
+        "data": {
+            "med_name": "Glucophage",
+            "patient_id": 4,
+            "dose": "500mg/day",
+            "amount": "60 pills",
+            "prescribed_date": "2015-10-01",
+            "renew_date": "2015-09-03"
+        }
+    },
+    {
+        "model": "prescriptions",
+        "data": {
+            "med_name": "Ambien",
+            "patient_id": 5,
+            "dose": "10mg/day",
+            "amount": "14 pills",
+            "prescribed_date": "2017-18-03",
+            "renew_date": "2017-02-04"
+        }
+    },
+    {
+        "model": "appointment",
+        "data": {
+            "type": "Annual Visit",
+            "date": "2017-09-10 10:00:00"
+        }
+    },
+    {
+        "model": "appointment",
+        "data": {
+            "type": "Follow-Up Visit",
+            "date": "2017-09-10 11:00:00",
+            "patient_id": 2,
+            "doctor_Id": 1
+        }
+    },
+    {
+        "model": "appointment",
+        "data": {
+            "type": "Follow-Up Visit",
+            "date": "2017-09-10 11:00:00",
+            "patient_id": 3,
+            "doctor_Id": 1
+        }
+    },
+    {
+        "model": "specialists",
+        "data": {
+            "first_name": "Michael",
+            "last_name": "Scalpel",
+            "street_address": "1312 5th St",
+            "city": "Los Angeles",
+            "state": "CA",
+            "zip": 90017,
+            "telephone": "2132001335",
+            "practice_type": "Podiatrist",
+            "image": "https://s-media-cache-ak0.pinimg.com/736x/e7/b2/d1/e7b2d1cd72b5243cf695d3bd487e352e--kitchen-sinks-ui.jpg"
+        }
+    },
+    {
+        "model": "specialists",
+        "data": {
+            "first_name": "Lauren",
+            "last_name": "Surgeonist",
+            "street_address": "1231 S Brand Blvd",
+            "city": "Glendale",
+            "state": "CA",
+            "zip": 91204,
+            "telephone": "2132001335",
+            "practice_type": "Heart Surgeon",
+            "image": "https://s-media-cache-ak0.pinimg.com/736x/60/7f/f2/607ff22d230565a215aacbe900fba2c2--ui-animation-jquery.jpg"
+        }
+    },
+    {
+        "model": "doctors",
+        "data": {
+            "first_name": "Regina",
+            "last_name": "Doctor",
+            "telephone": "323449090",
+            "appointments": ""
+        }
+    },
+    {
+        "model": "doctors",
+        "data": {
+            "first_name": "Lollmao",
+            "last_name": "Yollo",
+            "telephone": "626449090",
+            "appointments": ""
+        }
+    },
+    {
+        "model": "alerts",
+        "data": {
+            "type": "Phone",
+            "message": "Call Diana",
+            "is_alert": true,
+            "doctorId": 1
+        }
+    },
+    {
+        "model": "alerts",
+        "data": {
+            "type": "Message",
+            "message": "Respond to Mike",
+            "is_alert": true,
+            "doctorId": 1
+        }
+    },
+    {
+        "model": "alerts",
+        "data": {
+            "type": "Chat",
+            "message": "Respond to Laura",
+            "is_alert": true,
+            "doctorId": 1
+        }
+    },
+    {
+        "model": "alerts",
+        "data": {
+            "type": "Phone",
+            "message": "Complete paperwork for Blue Cross",
+            "is_alert": false,
+            "doctorId": 1
+        }
+    },
+    {
+        "model": "alerts",
+        "data": {
+            "type": "Message",
+            "message": "Clear calendar for Friday",
+            "is_alert": false,
+            "doctorId": 1
+        }
+    },
+    {
+        "model": "alerts",
+        "data": {
+            "type": "Chat",
+            "message": "Confirm Josh's appointment time",
+            "is_alert": false,
+            "doctorId": 1
+        }
+    },
+    {
+        "model": "lab_results",
+        "data": {
+            "test_name": "Cholesterol",
+            "patientId": 2,
+            "month": "Jan",
+            "year": 2017,
+            "test_value": 199
+        }
+    },
+    {
+        "model": "lab_results",
+        "data": {
+            "test_name": "Blood Glucose",
+            "patientId": 2,
+            "month": "Jan",
+            "year": 2017,
+            "test_value": 132
+        }
+    },
+    {
+        "model": "lab_results",
+        "data": {
+            "test_name": "Cholesterol",
+            "patientId": 2,
+            "month": "Jan",
+            "year": 2016,
+            "test_value": 210
+        }
+    },
+    {
+        "model": "lab_results",
+        "data": {
+            "test_name": "Blood Glucose",
+            "patientId": 2,
+            "month": "Jan",
+            "year": 2016,
+            "test_value": 120
+        }
+    }
+]

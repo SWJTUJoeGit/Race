@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<input type="text" name="title" id="title" placeholder="제목">
+<textarea name="content" id="content" placeholder="내용"></textarea>
+<button id="save" onclick="save()">저장</button>
+
+<script>
+    function save() {
+        $.ajax({
+            url: '/test/setTest',
+            type: 'post',
+            dataType: 'json',
+            data : {title: $('#title').val(), content: $('#content').val()},
+            success : function (data) {
+                if(data.result == 'SUCCESS'){
+                    location.reload();
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>

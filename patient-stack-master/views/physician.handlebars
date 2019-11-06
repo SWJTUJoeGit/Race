@@ -1,0 +1,135 @@
+{{!-- nav bar --}} {{> nav }}
+
+<div class="main ui stackable grid container">
+
+    <div class="ui container sixteen wide column">
+        <div class="ui raised teal segment">
+            <div class="row">
+                <h1 class="ui header">
+                    <img src="../assets/images/person.png" class="ui circular image"> Welcome Dr. James Dean
+                    <a href="/">
+                        <div id="logout" class="ui basic button">Log Out</div>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="eight wide column">
+        <table class="ui red two column table" id="table">
+            <thead class="ui inverted">
+                <tr>
+                    <th class="twelve wide"><i class="alarm icon"></i>Alerts</th>
+                    <th class="four wide">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="mail outline icon"></i>New Message from Jamie</td>
+                    <td>Incomplete</td>
+                </tr>
+                <tr>
+                    <td><i class="phone icon"></i>Follow up call with Michael</td>
+                    <td>Incomplete</td>
+                </tr>
+                <tr>
+                    <td><i class="mail outline icon"></i>New Message from Diana</td>
+                    <td>Incomplete</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="eight wide column">
+        <table class="ui blue one column table" id="table">
+            <thead>
+                <tr>
+                    <th><i class="checkmark box icon"></i>Tasks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="ui checkbox">
+                            <input type="checkbox">
+                            <label>Follow up call with Josh</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="ui checked checkbox">
+                            <input type="checkbox">
+                            <label>Follow up call with Beth</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="ui checked checkbox">
+                            <input type="checkbox">
+                            <label>Send in referral for Dave</label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="ui sixteen wide column">
+        <table class="ui teal table" id="table">
+            <thead>
+                <tr>
+                    <th class="three wide"><i class="alarm icon"></i>Upcoming Appointments</th>
+                    <th class="three wide"></th>
+                    <th class="five wide"></th>
+                    <th class="five wide"></th>
+                </tr>
+                <tr>
+                    <th class="three wide">Date</th>
+                    <th class="three wide">Time</th>
+                    <th class="five wide">Patient</th>
+                    <th class="five wide">Appointment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>May 24, 2017</td>
+                    <td>10:00am</td>
+                    <td>Abby Lee</td>
+                    <td>Consultation</td>
+                </tr>
+                <tr>
+                    <td>May 24, 2017</td>
+                    <td>10:30am</td>
+                    <td>Phil Collins</td>
+                    <td>Physical Exam</td>
+                </tr>
+                <tr>
+                    <td>May 24, 2017</td>
+                    <td>11:00am</td>
+                    <td>Will Smith</td>
+                    <td>Physical Exam</td>
+                </tr>
+                <tr>
+                    <td>May 25, 2017</td>
+                    <td>11:00am</td>
+                    <td>Bill Nye</td>
+                    <td>Physical Exam</td>
+                </tr>
+                <tr>
+                    <td>May 25, 2017</td>
+                    <td>11:30am</td>
+                    <td>Richard Simmons</td>
+                    <td>Phone Appointment</td>
+                </tr>
+                <tr>
+                    <td>May 26, 2017</td>
+                    <td>1:30pm</td>
+                    <td>Natalie Portman</td>
+                    <td>Follow up visit</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

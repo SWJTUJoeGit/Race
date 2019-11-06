@@ -1,0 +1,93 @@
+﻿<cust:CustomWindow x:Class="LineDraw.Canvas.CanvasView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ext="clr-namespace:LineDraw.External"
+        xmlns:cust="clr-namespace:CustomControlWPF;assembly=CustomControlWPF"
+        Title="Line draw" 
+        ResizeMode="NoResize" 
+        SizeToContent="WidthAndHeight"
+                   Foreground="Black">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+            Source="pack://application:,,,/LineDraw;component/Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border Background="{StaticResource MainBackgroundBrush}"
+            Padding="10,20,10,10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!-- Message display-->
+            <ContentControl Content="{Binding}"
+                            Grid.Column="1"
+                            ContentTemplate="{StaticResource MessageDisplayDataTemplate}"
+                            HorizontalAlignment="Right" 
+                            Height="150"
+                            Width="150" 
+                            IsTabStop="False"/>
+            <!--Main display-->
+            <Border Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Margin="0,10,0,0"
+                    Style="{StaticResource DisplayBorderStyle}">
+                <Grid>
+                    <!-- Lines-->
+                    <ItemsControl Height="{Binding CanvasHeight}" 
+                                  Width="{Binding CanvasWidth}" 
+                                  ItemsSource="{Binding Lines}"
+                                  ItemTemplate="{StaticResource LineItemDataTemplate}"
+                                  IsTabStop="False">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas Background="{StaticResource DisplayBackgroundBrush}" 
+                                        ext:MouseBehaviour.MouseUpCommand="{Binding SelectPointCommand}" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                    <!--Selected points-->
+                    <ContentControl ContentTemplate="{StaticResource PointContentDataTemplate}"
+                                    IsHitTestVisible="False"
+                                    IsTabStop="False"/>
+                    <!--Display grid-->
+                    <Border IsHitTestVisible="False">
+                        <Border.Background>
+                            <VisualBrush TileMode="Tile" Viewport="0,0,0.1,0.1">
+                                <VisualBrush.Visual>
+                                    <Image Source="pack://application:,,,/LineDraw;component/Resources/MainDisplayGrid.png" />
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+            </Border>
+            <!-- Push buttons -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="150"/>
+                </Grid.ColumnDefinitions>
+                <!--Reset/Power buttons -->
+                <ContentControl ContentTemplate="{StaticResource MainButtonsTemplate}"
+                                Content="{Binding}"
+                                Margin="4"/>
+                <!--Path finding buttons-->
+                <ContentControl ContentTemplate="{StaticResource PathAlgorithmDataTemplate}"
+                                Grid.Row="1"
+                                HorizontalAlignment="Center"
+                                IsTabStop="False"/>
+            </Grid>
+        </Grid>
+    </Border>
+</cust:CustomWindow>

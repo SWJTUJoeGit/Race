@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='/stylesheets/card_style.css' />
+  </head>
+  <body>
+
+   <div class="row" id="list">
+     <board-list
+             v-for="item in board"
+             v-bind:board="item">
+     </board-list>
+   </div>
+
+
+    <script>
+      Vue.component('board-list', {
+          props: ['board'],
+          template: '<div class="example-2 card">\n' +
+          '       <div class="wrapper">\n' +
+          '         <div class="header">\n' +
+          '           <div class="date">\n' +
+          '             <span class="day">12</span>\n' +
+          '             <span class="month">Aug</span>\n' +
+          '             <span class="year">2016</span>\n' +
+          '           </div>\n' +
+          '           <ul class="menu-content">\n' +
+          '             <li>\n' +
+          '               <a href="#" class="fa fa-bookmark-o"></a>\n' +
+          '             </li>\n' +
+          '             <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>\n' +
+          '             <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>\n' +
+          '           </ul>\n' +
+          '         </div>\n' +
+          '         <div class="data">\n' +
+          '           <div class="content">\n' +
+          '             <span class="author">Jane Doe</span>\n' +
+          '             <h1 class="title"><a href="#">{{ board.title }}</a></h1>\n' +
+          '             <p class="text">{{ board.content }}</p>\n' +
+          '             <a href="#" class="button">Read more</a>\n' +
+          '           </div>\n' +
+          '         </div>\n' +
+          '       </div>\n' +
+          '     </div>\n' +
+          '   </div>'
+      })
+
+      var data = <%- boards%>;
+      console.log("return data : " + data);
+
+        var socket = io('//localhost:3002');
+        socket.on('socketToMe', function (result) {
+            var data_json = JSON.parse(result);
+            console.log(result);
+            data.unshift({title: data_json.title, create_date: data_json.create_date})
+            // $('#board').append("<li> 제목 : "+ data_json.title +" / 작성일 : " + data_json.create_date+"</li>")
+        })
+
+      var list = new Vue({
+          el:'#list',
+          data:{
+              board:data
+          }
+      })
+
+
+    </script>
+
+  </body>
+</html>
